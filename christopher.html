@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="klop"></p>
+   <script>
+    var person = {
+        firstname : "Mani",
+        Lastname : "isreal",
+        Gender : "Male",
+        Age : "01", 
+
+        fullname : function(){
+        return this.firstname +  ""  + this.Lastname;
+    }
+    };
+
+        console.log(person.fullname())
+
+
+   
+    document.getElementById("klop").innerHTML = person.fullname();
+
+   </script> 
+</body>
+</html>

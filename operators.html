@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <p id="result"></p>
+
+    <script>
+        // Array of numbers
+        const numbers = [2, 5, 7, 8];
+
+        // Variable to store the result
+        let result = '';
+
+        // Check for odd and even numbers
+        numbers.forEach(num => {
+            if (num % 2 === 0) {
+                result += `${num} is even`;
+            } else {
+                result += `${num} is odd`;
+            }
+        });
+
+        // Output the result to the HTML element with id 'result'
+        document.getElementById('result').innerHTML = result;
+    </script>
+</body>
+</html>

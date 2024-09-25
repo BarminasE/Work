@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+    <div class="">
+		<h2>JavaScript HTML DOM</h2>
+		<p>Finding html dom</p>
+		<p>this example demonstrate something <b>getelementby something</b></p>
+		<p id="demo"></p>
+    </div>
+		<script>
+            const x  = document.getElementById("main");
+
+			const y  = x.getElementsByTagName("p");
+			document.getElementById("demo").innerHTML =
+				"the first paragraph(index 0) inside 'main' is: " + y[0].innerHTML;
+		</script>
+	</body>
+</html>

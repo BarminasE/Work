@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To-Do List</title>
+		<link rel="stylesheet" href="to do.css" />
+	</head>
+	<body>
+		<h1>To-Do List</h1>
+
+		<div id="add-todo">
+			<input type="text" id="new-todo" placeholder="Add a new to-do" />
+			<button onclick="addTodo()">Add</button>
+		</div>
+
+		<ul id="todo-list"></ul>
+
+		<script>
+			function addTodo() {
+				const todoText = document.getElementById("new-todo").value;
+
+				if (todoText === "") {
+					alert("Please enter a to-do item!");
+					return;
+				}
+
+				const li = document.createElement("li");
+				li.innerHTML = `
+                <span onclick="toggleTodo(this)">${todoText}</span>
+                <button onclick="removeTodo(this)">Remove</button>
+            `;
+
+				document.getElementById("todo-list").appendChild(li);
+				document.getElementById("new-todo").value = ""; 
+			}
+
+			function removeTodo(button) {
+				const li = button.parentElement;
+				li.remove();
+			}
+
+			function toggleTodo(span) {
+				const li = span.parentElement;
+				li.classList.toggle("completed");
+			}
+		</script>
+	</body>
+</html>

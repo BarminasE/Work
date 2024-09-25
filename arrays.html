@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+		<body>
+			<p id="name"></p>
+			<button onclick="Add()">Add Data</button>
+			<script>
+				var fruits, fruitsLenght, text;
+				fruits=["Banana", "Mango", "Apple","Orange"]
+				fruitsLenght=fruits.length;
+				text="<ul>"
+					for(let i=0;i<fruitsLenght; i++){
+						text+= "<li>" + fruits[i]+ "</li>";                                                                                    
+					}
+				document.getElementById("name").innerHTML = text;
+			</script>
+
+			<script>
+				fruits=["Banana", "Mango", "Apple","Orange"]
+				document.getElementById("name").innerHTML = text;
+				function Add(){
+					fruits.push("cherry")
+					document.getElementById("name").innerHTML = fruits;
+				}
+
+			</script>
+			
+		</body>
+	
+</html>

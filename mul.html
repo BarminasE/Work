@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Times Tables (1-5)</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin-top: 50px;
+			}
+			.tables-container {
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+			}
+			table {
+				border-collapse: collapse;
+				margin: 20px;
+				width: 150px;
+			}
+			td,
+			th {
+				border: 1px solid black;
+				padding: 8px;
+			}
+
+			h2 {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Times Tables (1 to 5)</h1>
+		<div class="tables-container" id="tablesContainer"></div>
+
+		<script>
+			function generateTableHTML(num) {
+				let tableHTML = `<h2>${num} Times Table</h2>`;
+				tableHTML += `<table><thead><tr><th>Multiplier</th><th>Result</th></tr></thead><tbody>`;
+
+				for (let i = 1; i <= 10; i++) {
+					tableHTML += `<tr><td>${num} x ${i}</td><td>${num * i}</td></tr>`;
+				}
+				tableHTML += `</tbody></table>`;
+				return tableHTML;
+			}
+
+			const tablesContainer = document.getElementById("tablesContainer");
+
+			// Loop through numbers 1 to 5 and generate tables
+			let fullHTML = "";
+			for (let num = 1; num <= 5; num++) {
+				fullHTML += `<div>${generateTableHTML(num)}</div>`;
+			}
+
+			tablesContainer.innerHTML = fullHTML;
+		</script>
+	</body>
+</html>

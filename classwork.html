@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let sum = 0;
+			for (let i = 1; i <= 20; i++) {
+				sum += i;
+			}
+			console.log(sum);
+
+			for (let i = 1; i <= 20; i++) {
+				if (i % 2 === 0) {
+					console.log(i);
+				}
+			}
+
+			let numbers = [3, 5, 2, 8, 1];
+			let maxNumber = 0; // Assume the first element is the maximum
+
+			for (let index = 0; index < numbers.length; index++) {
+				const element = numbers[index];
+				if (maxNumber > element) {
+				} else {
+					maxNumber = element;
+				}
+			}
+			console.log(`The maximum number in ${numbers} is ${maxNumber}`);
+
+            const number= [3, 5, 2, 8, 1, 0, 4];
+let minNumber = number[0];
+
+for (let index = 1; index < number.length; index++) {
+    const element = number[index];
+    if (element < minNumber) {
+        minNumber = element;
+    }
+}
+
+console.log(`The minimum number in [${number}] is ${minNumber}`);
+		
+
+			for (let i = 1; i < numbers.length; i++) {
+				if (numbers[i] > maxNumber) {
+					maxNumber = numbers[i];
+				}
+				if (numbers[i] < minNumber) {
+					minNumber = numbers[i];
+				}
+			}
+
+			let difference = maxNumber - minNumber;
+
+			console.log(`Difference between max and min: ${difference}`);
+		</script>
+	</body>
+</html>

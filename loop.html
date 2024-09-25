@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: cornflowerblue;
+				margin: 20px;
+			}
+			#tableOutput {
+				display: flex;
+				gap: 15px;
+			}
+			table {
+				border-collapse: collapse;
+				margin-top: 20px;
+			}
+			td {
+				border: 1px solid #000;
+				padding: 8px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Results</h1>
+		<p id="sumOutput"></p>
+		<p id="tableOutput"></p>
+
+		<script>
+			// Display the sum of odd numbers
+			let sum = 0;
+			for (let i = 1; i <= 50; i += 2) {
+				sum += i;
+			}
+			document.getElementById("sumOutput").textContent =
+				"Sum of odd numbers from 1 to 50: " + sum;
+
+			// Generate and display the multiplication table using a table
+			function generateMultiplicationTable() {
+				let table = document.getElementById("tableOutput");
+				let rw = "";
+
+				for (let i = 1; i <= 10; i++) {
+					for (let j = 1; j <= 10; j++) {
+						rw += `${i} * ${j} = ${i * j}` + "<br/>"; // Add the multiplication result to the cell
+					}
+					table.innerHTML = rw; // Add the row to the table
+				}
+
+				// for (let i = 1; i <= 10; i++) {
+				// 	let row = document.createElement("tr"); // Create a new row
+				// 	for (let j = 1; j <= 10; j++) {
+				// 		let cell = document.createElement("td"); // Create a new cell
+				// 		cell.textContent = `${i} * ${j} = ${i * j}`; // Add the multiplication result to the cell
+				// 		row.appendChild(cell); // Add the cell to the row
+				// 	}
+				// 	table.appendChild(row); // Add the row to the table
+				// }
+			}
+
+			generateMultiplicationTable();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+         <p id="re">This paragraph</p>
+    </div>
+    
+    <script>
+        const parent = document.getElementById("parent");
+
+        const heading = document.createElement("H1");
+        heading.innerHTML = "This";
+
+        heading.style.color = "red";
+        heading.style.fontStyle = "italic";
+
+        parent.appendChild(heading);
+
+        const para = document.getElementById("re");
+        para.remove();
+    </script> 
+</body>
+</html>
